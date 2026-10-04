@@ -6,12 +6,14 @@
     <body>
         <a href="https://github.com/CoconutChickenJH86/test">github link</a>
         <p>Disclaimer: Not a useful webpage. Click all you want. Nothing is going to happen on your side.</p>
+        <input type="text" placeholder="type here!" id="testingInput">
         <button onclick="tester();">Test me!</button>
         <script>
             function tester() {
                 fetch("https://script.google.com/macros/s/AKfycbyMKsiM7VRiEdnsd22jGDa4ypWeb6WtqlnQH-BDye53j3v8VsPP8euaCpBuHFwFz0zaSw/exec", {
                     method: "POST",
-                    mode: "no-cors"
+                    mode: "no-cors",
+                    body: document.getElementById("testingInput").value
                 });
             }
         </script>
